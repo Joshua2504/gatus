@@ -11,7 +11,7 @@ endpoint-web: &web
     conditions:
 #      - "[STATUS] == 200"
       - "[CERTIFICATE_EXPIRATION] > 3d"
-      - "[RESPONSE_TIME] < 300"
+      - "[RESPONSE_TIME] < 500"
       - "[CONNECTED] == true"
 
 endpoint-domain: &domain
