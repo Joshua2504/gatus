@@ -124,6 +124,22 @@ endpoints:
     conditions:
       - "[RESPONSE_TIME] < 300"
       - "[CONNECTED] == true"
+      
+  - name: regnum-ra
+    group: regnum
+    url: "tcp://104.196.13.153:48000"
+    <<: *web
+    conditions:
+      - "[RESPONSE_TIME] < 200"
+      - "[CONNECTED] == true"
+      
+  - name: regnum-patch-server
+    group: regnum
+    url: "http://104.196.149.195/"
+    <<: *web
+    conditions:
+      - "[RESPONSE_TIME] < 200"
+      - "[CONNECTED] == true"
 
 
   - name: ytdl.treudler.net
