@@ -125,7 +125,7 @@ endpoints:
       - "[RESPONSE_TIME] < 300"
       - "[CONNECTED] == true"
       
-  - name: regnum-ra
+  - name: regnum-server-ra
     group: regnum
     url: "tcp://104.196.13.153:48000"
     <<: *web
@@ -138,7 +138,7 @@ endpoints:
     url: "http://104.196.149.195/"
     <<: *web
     conditions:
-      - "[RESPONSE_TIME] < 200"
+      - "[RESPONSE_TIME] < 500"
       - "[CONNECTED] == true"
 
 
