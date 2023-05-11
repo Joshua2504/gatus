@@ -106,6 +106,16 @@ endpoints:
     group: treudler-web
     url: "https://pihole.treudler.net/admin/index.php"
     <<: *web
+    
+  - name: gatus.status.treudler.net
+    group: treudler-web
+    url: "https://gatus.status.treudler.net/"
+    <<: *web
+
+  - name: kuma.status.treudler.net
+    group: treudler-web
+    url: "https://kuma.status.treudler.net/"
+    <<: *web
 
   - name: treudler.net-nginx-proxy-manager
     group: services
