@@ -1,12 +1,12 @@
 endpoint-web: &web
-    interval: 60s
+    interval: 20s
     client:
-      timeout: 30s
+      timeout: 10s
     alerts:
       - type: discord
         description: "healthcheck failed"
         send-on-resolved: true
-        failure-threshold: 5
+        failure-threshold: 3
         success-threshold: 3
     conditions:
 #      - "[STATUS] == 200"
