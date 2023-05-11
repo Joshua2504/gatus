@@ -1,0 +1,4 @@
+.env
+data/
+config/storage.yaml
+config/alerting.yaml

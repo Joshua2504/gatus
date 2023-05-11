@@ -1,0 +1,117 @@
+endpoint-web: &web
+    interval: 60s
+    client:
+      timeout: 30s
+    alerts:
+      - type: discord
+        description: "healthcheck failed"
+        send-on-resolved: true
+        failure-threshold: 5
+        success-threshold: 3
+    conditions:
+#      - "[STATUS] == 200"
+      - "[CERTIFICATE_EXPIRATION] > 3d"
+      - "[RESPONSE_TIME] < 300"
+      - "[CONNECTED] == true"
+
+endpoint-domain: &domain
+    group: domains
+    interval: 3600s
+    alerts:
+      - type: discord
+        description: "healthcheck failed"
+        send-on-resolved: true
+        failure-threshold: 2
+        success-threshold: 3
+    conditions:
+      - "[DOMAIN_EXPIRATION] > 100d"
+
+endpoints:
+  - name: cor-forum.de
+    group: cor-forum-web
+    url: "https://cor-forum.de/"
+    <<: *web 
+
+  - name: maps.cor-forum.de
+    group: cor-forum-web
+    url: "https://maps.cor-forum.de/"
+    <<: *web
+
+  - name: usercontent.cor-forum.de
+    group: cor-forum-web
+    url: "https://usercontent.cor-forum.de/"
+    <<: *web
+
+  - name: treudler.net
+    url: "https://treudler.net/"
+    <<: *domain
+
+  - name: cor-forum.de
+    url: "https://cor-forum.de/"
+    <<: *domain
+
+  - name: pihole-dns
+    group: services
+    url: "tcp://130.61.219.48:53"
+    interval: 10s
+    conditions:
+      - "[CONNECTED] == true"
+
+  - name: treudler.net
+    group: treudler-web
+    url: "https://treudler.net/"
+    <<: *web
+
+  - name: cdn.treudler.net
+    group: treudler-web
+    url: "https://cdn.treudler.net/"
+    <<: *web
+
+  - name: cdn2.treudler.net
+    group: treudler-web
+    url: "https://cdn2.treudler.net/"
+    <<: *web
+
+  - name: matomo.treudler.net
+    group: treudler-web
+    url: "https://matomo.treudler.net/"
+    <<: *web
+
+  - name: smokeping.treudler.net
+    group: treudler-web
+    url: "https://smokeping.treudler.net/"
+    <<: *web
+
+  - name: archivebox.treudler.net
+    group: treudler-web
+    url: "https://archivebox.treudler.net/"
+    <<: *web
+
+  - name: go.treudler.net
+    group: treudler-web
+    url: "https://go.treudler.net/"
+    <<: *web
+
+  - name: go-backend.treudler.net
+    group: treudler-web
+    url: "https://go-backend.treudler.net/"
+    <<: *web
+
+  - name: pihole.treudler.net
+    group: treudler-web
+    url: "https://pihole.treudler.net/admin/index.php"
+    <<: *web
+
+  - name: treudler.net-nginx-proxy-manager
+    group: services
+    url: "http://130.61.219.48:81/"
+    <<: *web
+    conditions:
+      - "[RESPONSE_TIME] < 300"
+      - "[CONNECTED] == true"
+
+
+  - name: ytdl.treudler.net
+    group: treudler-web
+    url: "https://ytdl.treudler.net/"
+    <<: *web

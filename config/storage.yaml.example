@@ -1,0 +1,3 @@
+storage:
+  type: postgres
+  path: "postgres://user:pass@postgres:5432/gatus?sslmode=disable"
