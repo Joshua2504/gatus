@@ -41,6 +41,11 @@ endpoints:
     group: cor-forum-web
     url: "https://usercontent.cor-forum.de/"
     <<: *web
+    
+  - name: old.cor-forum.de
+    group: cor-forum-web
+    url: "https://old.cor-forum.de/"
+    <<: *web
 
   - name: treudler.net
     url: "https://treudler.net/"
