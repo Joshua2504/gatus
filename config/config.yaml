@@ -135,6 +135,11 @@ endpoints:
     group: treudler-web
     url: "https://gatus.status.treudler.net/"
     <<: *web
+    
+  - name: test.status.treudler.net
+    group: treudler-web
+    url: "https://test.status.treudler.net/"
+    <<: *web
 
   - name: kuma.status.treudler.net
     group: treudler-web
