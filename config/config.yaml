@@ -65,6 +65,11 @@ endpoints:
     group: cor-forum-web
     url: "https://beta.cor-forum.de/"
     <<: *web
+    
+  - name: pma.cor-forum.de
+    group: cor-forum-web
+    url: "https://pma.cor-forum.de/"
+    <<: *web
 
   - name: treudler.net
     url: "https://treudler.net/"
