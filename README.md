@@ -1,6 +1,6 @@
 # https://gatus.status.treudler.net
 
-# cronjob for git
+# Cronjob for git
 
 install this cron on the host if you plan to keep the config up to date.
 
