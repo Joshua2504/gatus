@@ -9,3 +9,5 @@ gatus will automatically reload the configuration files.
 ```
 */1 * * * * git --git-dir=/<gatus-path>/.git pull -a
 ```
+
+test
