@@ -1,4 +1,4 @@
-# gatus
+# https://gatus.status.treudler.net
 
 # cronjob
 
