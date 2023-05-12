@@ -25,6 +25,20 @@ endpoint-domain: &domain
         success-threshold: 3
     conditions:
       - "[DOMAIN_EXPIRATION] > 100d"
+      
+endpoint-icmp: &icmp
+    interval: 20s
+    client:
+      timeout: 10s
+    alerts:
+      - type: discord
+        description: "healthcheck failed"
+        send-on-resolved: true
+        failure-threshold: 3
+        success-threshold: 3
+    conditions:
+      - "[RESPONSE_TIME] < 100"
+      - "[CONNECTED] == true"
 
 endpoints:
   - name: cor-forum.de
