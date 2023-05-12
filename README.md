@@ -1,4 +1,4 @@
-# https://gatus.status.treudler.net
+# URL https://gatus.status.treudler.net
 
 # Cronjob for git
 
