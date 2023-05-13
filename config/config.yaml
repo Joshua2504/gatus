@@ -149,9 +149,17 @@ endpoints:
       - "[RESPONSE_TIME] < 300"
       - "[CONNECTED] == true"
       
+  - name: mc.treudler.net
+    group: services
+    url: "tcp://104.196.13.153:48000"
+    <<: *web
+    conditions:
+      - "[RESPONSE_TIME] < 200"
+      - "[CONNECTED] == true"
+      
   - name: regnum-server-ra
     group: regnum
-    url: "tcp://104.196.13.153:48000"
+    url: "tcp://mc.treudler.net:25565"
     <<: *web
     conditions:
       - "[RESPONSE_TIME] < 200"
