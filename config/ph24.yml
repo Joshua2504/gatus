@@ -1,0 +1,40 @@
+endpoint-ph24-web: &web-ph24
+    interval: 20s
+    client:
+      timeout: 10s
+    alerts:
+      - type: discord
+        description: "healthcheck failed"
+        send-on-resolved: true
+        failure-threshold: 3
+        success-threshold: 3
+    conditions:
+#      - "[STATUS] == 200"
+      - "[CERTIFICATE_EXPIRATION] > 3d"
+      - "[RESPONSE_TIME] < 500"
+      - "[CONNECTED] == true"
+      
+endpoint-icmp-ph24: &icmp-ph24
+    interval: 20s
+    client:
+      timeout: 10s
+    alerts:
+      - type: discord
+        description: "healthcheck failed"
+        send-on-resolved: true
+        failure-threshold: 3
+        success-threshold: 3
+    conditions:
+      - "[RESPONSE_TIME] < 100"
+      - "[CONNECTED] == true"
+
+endpoints:
+  - name: prohosting24.de
+    group: prohosting24
+    url: "https://prohosting24.de/"
+    <<: *web-ph24
+
+  - name: prohosting24.de
+    url: "https://prohosting24.de/"
+    <<: *domain
+
