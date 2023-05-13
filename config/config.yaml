@@ -175,6 +175,7 @@ endpoints:
     url: "https://prohosting24.de/"
     <<: *web
 
-  - name: prohosting24.de
+  - name: prohosting24.de-domain
+    group: prohosting24
     url: "https://prohosting24.de/"
     <<: *domain
