@@ -165,8 +165,16 @@ endpoints:
       - "[RESPONSE_TIME] < 500"
       - "[CONNECTED] == true"
 
-
   - name: ytdl.treudler.net
     group: treudler-web
     url: "https://ytdl.treudler.net/"
     <<: *web
+
+  - name: prohosting24.de
+    group: prohosting24
+    url: "https://prohosting24.de/"
+    <<: *web
+
+  - name: prohosting24.de
+    url: "https://prohosting24.de/"
+    <<: *domain
