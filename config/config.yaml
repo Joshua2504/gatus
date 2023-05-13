@@ -101,6 +101,11 @@ endpoints:
     url: "https://cdn2.treudler.net/"
     <<: *web
 
+  - name: pma.treudler.net
+    group: treudler-web
+    url: "https://pma.treudler.net/"
+    <<: *web
+
   - name: matomo.treudler.net
     group: treudler-web
     url: "https://matomo.treudler.net/"
