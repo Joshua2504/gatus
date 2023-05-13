@@ -120,6 +120,12 @@ endpoints:
     group: treudler-web
     url: "https://archivebox.treudler.net/"
     <<: *web
+    
+
+  - name: paperless.treudler.net
+    group: treudler-web
+    url: "https://paperless.treudler.net/"
+    <<: *web
 
   - name: go.treudler.net
     group: treudler-web
