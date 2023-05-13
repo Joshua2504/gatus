@@ -71,13 +71,13 @@ endpoints:
     url: "https://pma.cor-forum.de/"
     <<: *web
 
-  - name: treudler.net
-    url: "https://treudler.net/"
-    <<: *domain
+#  - name: treudler.net
+#    url: "https://treudler.net/"
+#    <<: *domain
 
-  - name: cor-forum.de
-    url: "https://cor-forum.de/"
-    <<: *domain
+#  - name: cor-forum.de
+#    url: "https://cor-forum.de/"
+#    <<: *domain
 
   - name: pihole-dns
     group: services
@@ -174,8 +174,3 @@ endpoints:
     group: prohosting24
     url: "https://prohosting24.de/"
     <<: *web
-
-  - name: prohosting24.de-domain
-    group: prohosting24
-    url: "https://prohosting24.de/"
-    <<: *domain
