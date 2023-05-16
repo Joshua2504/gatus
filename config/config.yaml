@@ -136,6 +136,11 @@ endpoints:
     group: treudler-web
     url: "https://go-backend.treudler.net/"
     <<: *web
+    
+  - name: analytics.treudler.net
+    group: treudler-web
+    url: "https://analytics.treudler.net/"
+    <<: *web
 
   - name: pihole.treudler.net
     group: treudler-web
