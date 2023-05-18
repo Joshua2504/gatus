@@ -160,6 +160,11 @@ endpoints:
     group: treudler-status
     url: "https://netdata-orakel.status.treudler.net/"
     <<: *web
+    
+  - name: netdata-ph24.status.treudler.net
+    group: treudler-status
+    url: "https://netdata-ph24.status.treudler.net/"
+    <<: *web
 
   - name: treudler.net-nginx-proxy-manager
     group: services
