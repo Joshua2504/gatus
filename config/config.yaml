@@ -141,6 +141,11 @@ endpoints:
     url: "https://pihole.treudler.net/admin/index.php"
     <<: *web
     
+  - name: drive.treudler.net
+    group: treudler-web
+    url: "https://drive.treudler.net/"
+    <<: *web
+    
   - name: gatus.status.treudler.net
     group: treudler-status
     url: "https://gatus.status.treudler.net/"
