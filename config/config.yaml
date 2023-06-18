@@ -192,3 +192,13 @@ endpoints:
     group: treudler-web
     url: "https://ytdl.treudler.net/"
     <<: *web
+
+  - name: minecraftforum.de
+    group: knight
+    url: "https://minecraftforum.de/"
+    <<: *web
+
+  - name: tobiassachs.de
+    group: knight
+    url: "https://tobiassachs.de/"
+    <<: *web
