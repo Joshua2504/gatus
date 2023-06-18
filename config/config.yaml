@@ -120,16 +120,6 @@ endpoints:
     group: treudler-web
     url: "https://paperless.treudler.net/"
     <<: *web
-
-  - name: go.treudler.net
-    group: treudler-web
-    url: "https://go.treudler.net/"
-    <<: *web
-
-  - name: go-backend.treudler.net
-    group: treudler-web
-    url: "https://go-backend.treudler.net/"
-    <<: *web
     
   - name: analytics.treudler.net
     group: treudler-web
@@ -164,11 +154,6 @@ endpoints:
   - name: netdata-orakel.status.treudler.net
     group: treudler-status
     url: "https://netdata-orakel.status.treudler.net/"
-    <<: *web
-    
-  - name: netdata-ph24.status.treudler.net
-    group: treudler-status
-    url: "https://netdata-ph24.status.treudler.net/"
     <<: *web
 
   - name: treudler.net-nginx-proxy-manager
